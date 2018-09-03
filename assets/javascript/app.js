@@ -1,26 +1,15 @@
 //Wait for whole page to load before Javascript
 $(document).ready(function () {
 
-    // Example queryURL for Giphy API
-
-    // const queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
-
-    // $.ajax({
-    //   url: queryURL,
-    //   method: "GET"
-    // }).then(function(response) {
-    //   console.log(response);
-    // });
 
     const searchGif = gif => {
         $.get("https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=dc6zaTOxFJmzC") .then(data => {
-            $(".gifWindow").prepend(
-                // <img src="https://giphy.com/embed/cfuL5gqFDreXxkWQ4o"></img>
-                
-                
-            `<img src='${data.data[0].images.original.url}' />`
+        
+            for (let i = 0; i < 5; i++){
+        $(".gifWindow").prepend(        
+            `<img src='${data.data[i].images.original.url}' width=200 height=200 />`
         )  
-        console.log(data.data[0].bitly_gif_url);
+    }
         });
     }
 
