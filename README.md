@@ -1,7 +1,7 @@
 # giphyAPI
 Week 6 API Giphy API Assignment
 
-![Alt text](assets/images/fiphyScreen?raw=true "Giphy Screenshot")
+![Alt text](assets/images/giphyScreen.jpg?raw=true "Giphy Screenshot")
 
 
 - How does it work? 
