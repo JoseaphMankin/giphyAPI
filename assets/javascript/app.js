@@ -1,6 +1,6 @@
 //Wait for whole page to load before Javascript
 $(document).ready(function () {
-    const topics = ["Star Wars", "Rick and Morty", "Game of Thrones", "Cats", "Dogs", "Storybots"];
+    const topics = ["Star Wars", "Rick and Morty", "Game of Thrones", "Bigfoot", "Happy Days", "Storybots", "Batman"];
     let isStillOn = true;
 
     //Setup buttons dynamically created by looping through array and assigning classes and attributes
@@ -28,7 +28,7 @@ $(document).ready(function () {
     const searchGif = gif => {
         $.get("https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=dc6zaTOxFJmzC").then(data => {
 
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 10; i++) {
                 $(".gifWindow").prepend(`
 
                 <div class="card" style="width: 25rem;">
