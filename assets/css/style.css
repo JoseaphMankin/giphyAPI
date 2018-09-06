@@ -16,9 +16,28 @@ h1{
       border-bottom: 3px solid black;
       margin: 0px;
       padding: 0px;
+      font-size: 60pt;
       
+  }
+
+  header{
+      margin-bottom: 5px;
   }
   
   body{
-      background-color: lightgray;
+      background-image: url(../images/bluebackground.png);
+      background-size: cover;
+  }
+
+  .card{
+      float: left;
+      margin: 3px;
+  }
+
+  .gif-btn{
+      margin: 3px;
+  }
+
+  .playing{
+      background-color: green;
   }

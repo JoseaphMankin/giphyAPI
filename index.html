@@ -14,27 +14,33 @@
 </head>
 <body>
     <header>
-        <h1>GIPHY API</h1>
+        <h1>GIPHY GENERATOR</h1>
     </header>
     <!-- This form will be where users input data about the movies -->
     <div class="container">
-        
-            <div class="gif-buttons">
-                <!-- <button class='btn btn-outline-secondary mr-2 gif-btn' data-gif="cats">Cats</button> -->
-            </div>
-        
-            <!-- This form will be where users input data about the movies -->
-            <form class="movie-form form mt-4"> 
-              <div class="form-group">
-                <input class='form-control gif-input' placeholder="Search for a GIF" type="text" />
-              </div>
-              <div class="form-group">
-                <input class="add-gif-btn btn btn-primary btn-outline-primary" type="submit" value="Add Gifs" />
-              </div>
-            </form>
+            <div class="container">
+                    <div class="row">
+                      <div class="col-6 gif-buttons">
+                      </div>
+                      <div class="col-6">
+                            <form class="movie-form form mt-4"> 
+                                    <div class="form-group">
+                                      <input class='form-control gif-input' placeholder="Add your own GIF Button Here!" type="text" />
+                                    </div>
+                                    <div class="form-group">
+                                      <input class="add-gif-btn btn btn-primary btn-warning" type="submit" value="Add Gifs" />
+                                    </div>
+                                  </form>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col gifWindow">
+                      </div>
+                    </div>
+                  </div>
 
-            <div class="gifWindow">
-                
-                </div>
+        
+            
+
 </body>
 </html>
