@@ -13,4 +13,4 @@ Week 6 API Giphy API Assignment
   * AJAX calls to GIPHY API and creating returned content dynamically to DOM 
   
 - What is the direct link to the project?
-  * The game is hosted here: [giphyAPI](https://joseaphmankin.github.io/giphyAPI/).
+  * The page is hosted here: [giphyAPI](https://joseaphmankin.github.io/giphyAPI/).

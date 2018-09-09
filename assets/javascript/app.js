@@ -1,6 +1,6 @@
 //Wait for whole page to load before Javascript
 $(document).ready(function () {
-    const topics = ["Star Wars", "Rick and Morty", "Game of Thrones", "Bigfoot", "Happy Days", "Storybots", "Batman"];
+    const topics = ["Star Wars", "Rick and Morty", "Game of Thrones", "Spider-Man", "Aliens", "Storybots", "Batman"];
     let isStillOn = true;
 
     //Setup buttons dynamically created by looping through array and assigning classes and attributes
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
                 <div class="card" style="width: 25rem;">
                     <img class="card-img-top still" src="${data.data[i].images.fixed_height_still.url}" data-still='${data.data[i].images.fixed_height_still.url}' data-original='${data.data[i].images.original.url}' height=300 />
-                        <div class="card-body">
+                        <div class="card-body moving">
                             <p class="card-text">Rated: ${data.data[i].rating}</p>
                          </div>
                 </div>
@@ -60,17 +60,30 @@ $(document).ready(function () {
 
     //onClick of a "Still", switches over to actual GIF, or flipping back to the still.
 
+
     $(document).on("click", ".still", function (event) {
         if (isStillOn) {
             $(this).attr("src", $(this).data("original"));
-            $(this).addClass("playing");
+            //Parent "Card" passed to color changer function
+            colorChanger(this.parentElement);
             isStillOn = false;
+
         } else {
             $(this).attr("src", $(this).data("still"))
             $(this).removeClass("playing");
+            //reverts all cards background to white
+            $(".moving").css("background-color", "white");
             isStillOn = true;
         }
 
     })
+
+    //colorChanger Function. Gets info passed from onCLick of the Gif Photo
+    function colorChanger(parentCard) {
+        $(parentCard).find(".moving").css("background-color", "green");
+    };
+
+
+
 
 });
